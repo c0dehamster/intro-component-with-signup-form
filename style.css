@@ -277,7 +277,8 @@ body {
 	border: 1px solid var(--color-neutral-dark-blue);
 }
 
-.sign-up__button:hover::before {
+.sign-up__button:hover::before,
+.sign-up__button:focus::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -287,6 +288,11 @@ body {
 	border-radius: var(--radius-6);
 
 	background-color: rgba(255, 255, 255, 0.25);
+}
+
+.sign-up__link:focus,
+.sign-up__link:hover {
+	border-bottom: 1px solid;
 }
 
 @media (min-width: 72rem) {
