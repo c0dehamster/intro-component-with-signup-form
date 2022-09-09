@@ -266,7 +266,6 @@ body {
 
 .sign-up__input--error {
 	border: 2px solid var(--color-primary-red);
-	color: var(--color-primary-red);
 
 	background-image: url("images/icon-error.svg");
 	background-repeat: no-repeat;
@@ -279,6 +278,10 @@ body {
 .sign-up__input:focus {
 	outline: none;
 	border: 1px solid var(--color-neutral-dark-blue);
+}
+
+.sign-up__input--error::placeholder {
+	color: transparent;
 }
 
 .sign-up__button:hover::before,
