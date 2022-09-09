@@ -227,6 +227,7 @@ body {
 	position: relative;
 
 	letter-spacing: 1.5px;
+	cursor: pointer;
 
 	background-color: var(--color-primary-green);
 	color: white;
