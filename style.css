@@ -267,6 +267,10 @@ body {
 .sign-up__input--error {
 	border: 2px solid var(--color-primary-red);
 	color: var(--color-primary-red);
+
+	background-image: url("images/icon-error.svg");
+	background-repeat: no-repeat;
+	background-position: center right var(--spacer-24);
 }
 
 /* Altered states */
