@@ -127,6 +127,7 @@ body {
 	color: white;
 	background-color: var(--color-primary-red);
 	background-image: url("images/bg-intro-mobile.png");
+	background-repeat: repeat-x;
 }
 
 .flex-container {
