@@ -1,0 +1,324 @@
+/* CSS reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* General styling */
+
+:root {
+	--color-primary-red: hsl(0, 100%, 74%);
+	--color-primary-green: hsl(154, 59%, 51%);
+
+	--color-accent-blue: hsl(248, 32%, 49%);
+
+	--color-neutral-dark-blue: hsl(249, 10%, 26%);
+	--color-neutral-grayish-blue: hsl(246, 25%, 77%);
+
+	--font-size-main: 1rem;
+
+	--font-size-main: 1rem;
+	--font-size-small: 0.7rem;
+	--font-size-medium: 0.9rem;
+	--font-size-accent: 1.8rem;
+	--font-size-accent-large: 3rem;
+
+	--font-weight-light: 300;
+	--font-weight-medium: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--spacer-8: 0.5rem;
+	--spacer-16: 1rem;
+	--spacer-20: 1.25rem;
+	--spacer-24: 1.5rem;
+	--spacer-32: 2rem;
+	--spacer-40: 2.5rem;
+	--spacer-48: 3rem;
+	--spacer-56: 3.5rem;
+	--spacer-60: 3.75rem;
+	--spacer-64: 4rem;
+	--spacer-68: 4.25rem;
+
+	--radius-6: 6px;
+	--radius-10: 10px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	font-family: "Poppins", sans-serif;
+	font-size: var(--font-size-main);
+
+	color: white;
+	background-color: var(--color-primary-red);
+	background-image: url("images/bg-intro-mobile.png");
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	max-width: 69.5rem;
+	gap: var(--spacer-24);
+	margin-inline: var(--spacer-24);
+	margin-block: var(--spacer-68);
+}
+
+.flex-item {
+	flex: 0 1 33.75rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.text-wrapper {
+	margin-block-end: var(--spacer-68);
+	text-align: center;
+}
+
+.sign-up {
+	padding: var(--spacer-24);
+	border-radius: var(--radius-10);
+
+	background-color: white;
+	box-shadow: 0 var(--spacer-8) 0 rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action {
+	width: 100%;
+	min-height: var(--spacer-60);
+	max-height: 5.5rem;
+	margin-block-end: var(--spacer-24);
+	padding-inline: var(--spacer-68);
+	padding-block: var(--spacer-16);
+	border-radius: var(--radius-10);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+
+	background-color: var(--color-accent-blue);
+	box-shadow: 0 var(--spacer-8) 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Elements */
+
+.text-wrapper__header {
+	margin-block: var(--spacer-24);
+
+	font-size: var(--font-size-accent);
+	font-weight: var(--font-weight-bold);
+	line-height: 1.1;
+}
+
+.call-to-action__accent {
+	font-weight: var(--font-weight-semibold);
+}
+
+.sign-up__controls {
+	display: grid;
+	gap: var(--spacer-16);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.sign-up__field,
+.sign-up__input,
+.sign-up__button {
+	width: 100%;
+
+	border: none;
+}
+
+.sign-up__input,
+.sign-up__button {
+	min-height: var(--spacer-56);
+	border-radius: var(--radius-6);
+
+	font-size: var(--font-size-medium);
+	font-weight: var(--font-weight-semibold);
+}
+
+.sign-up__input {
+	border: 1px solid var(--color-neutral-grayish-blue);
+	padding-inline-start: var(--spacer-16);
+
+	border: 1px solid var(--color-neutral-grayish-blue);
+}
+
+.sign-up__button {
+	position: relative;
+
+	letter-spacing: 1.5px;
+
+	background-color: var(--color-primary-green);
+	color: white;
+	box-shadow: 0 -4px inset rgba(0, 0, 0, 0.2);
+}
+
+.sign-up__error {
+	max-height: var(--spacer-24);
+
+	text-align: end;
+	font-size: var(--font-size-small);
+	font-style: italic;
+
+	color: var(--color-primary-red);
+}
+
+.sign-up__text {
+	text-align: center;
+	margin-block: var(--spacer-8);
+	margin-inline: var(--spacer-16);
+
+	font-size: var(--font-size-small);
+	line-height: 2;
+
+	color: var(--color-neutral-grayish-blue);
+}
+
+.sign-up__link {
+	font-weight: var(--font-weight-bold);
+	text-decoration: none;
+
+	color: var(--color-primary-red);
+}
+
+/* Modifiers */
+
+.sign-up__input--error {
+	border: 2px solid var(--color-primary-red);
+	color: var(--color-primary-red);
+}
+
+/* Altered states */
+
+.sign-up__input:hover,
+.sign-up__input:focus {
+	outline: none;
+	border: 1px solid var(--color-neutral-dark-blue);
+}
+
+.sign-up__button:hover::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: var(--radius-6);
+
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media (min-width: 72rem) {
+	body {
+		background-image: url("images/bg-intro-desktop.png");
+	}
+
+	footer {
+		position: absolute;
+		bottom: 1rem;
+		margin: auto;
+	}
+
+	.text-wrapper {
+		margin-block: auto;
+		position: relative;
+		bottom: var(--spacer-16);
+		text-align: left;
+	}
+
+	.sign-up {
+		padding: var(--spacer-40);
+	}
+
+	.text-wrapper__header {
+		font-size: var(--font-size-accent-large);
+		margin-bottom: var(--spacer-32);
+	}
+
+	.sign-up__controls {
+		gap: var(--spacer-20);
+	}
+
+	.sign-up__input {
+		padding-inline-start: var(--spacer-32);
+	}
+}

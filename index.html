@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+		<title>Frontend Mentor | Intro component with sign up form</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="flex-item">
+				<div class="text-wrapper">
+					<h1 class="text-wrapper__header">Learn to code by watching others</h1>
+
+					<p class="text-wrapper__text">
+						See how experienced developers solve problems in real-time. Watching scripted tutorials is
+						great, but understanding how developers think is invaluable.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex-item">
+				<div class="call-to-action">
+					<p class="call-to-action__text">
+						<span class="call-to-action__accent">Try it free 7 days</span> then $20/mo. thereafter
+					</p>
+				</div>
+
+				<form action="" class="sign-up">
+					<ul class="sign-up__controls">
+						<li class="sign-up__field">
+							<input type="text" class="sign-up__input" placeholder="First Name" id="first-name" />
+
+							<p class="sign-up__error"></p>
+						</li>
+						<li class="sign-up__field">
+							<input type="text" class="sign-up__input" placeholder="Last Name" id="last-name" />
+
+							<p class="sign-up__error"></p>
+						</li>
+						<li class="sign-up__field">
+							<input type="text" class="sign-up__input" placeholder="Email Address" id="email" />
+
+							<p class="sign-up__error"></p>
+						</li>
+						<li class="sign-up__field">
+							<input type="password" class="sign-up__input" placeholder="Password" id="password" />
+
+							<p class="sign-up__error"></p>
+						</li>
+						<li class="sign-up__field">
+							<button type="submit" class="sign-up__button" id="sign-up-button">
+								CLAIM YOUR FREE TRIAL
+							</button>
+						</li>
+					</ul>
+
+					<p class="sign-up__text">
+						By clicking the button, you are agreeing to our
+						<a href="#" class="sign-up__link">Terms and Services</a>
+					</p>
+				</form>
+			</div>
+		</div>
+
+		<footer>
+			<p class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+				Coded by <a href="#">twDewNoob</a>.
+			</p>
+		</footer>
+	</body>
+</html>
